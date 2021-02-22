@@ -4,6 +4,9 @@
   <p>{{ contador }}</p>
   <button v-on:click="sum(5, $event)">Sum</button>
   <a v-on:click.prevent="" href='https://google.com'>Google</a>
+
+  <!-- modificador de evento de tecla -->
+  <input type="text" v-on:keyup.enter="showAlert">
 </div>
 
 <script>
@@ -16,6 +19,9 @@
       sum: function(number, e) {
         console.log(e)
         return this.contador += number
+      },
+      showAlert: function() {
+        alert('hello world')
       }
     }
   })
