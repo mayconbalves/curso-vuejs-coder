@@ -1,0 +1,15 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+  <p>{{ title }}</p>
+  <input v-model="title">
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      title: 'Bem-vindo ao VueJS'
+    }
+  })
+</script>
